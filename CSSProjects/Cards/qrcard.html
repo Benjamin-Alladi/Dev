@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Card</title>
+
+    <style>
+
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+        }
+
+        .container{
+
+            width:100vw;
+            height:100vw;
+
+            min-height:1000px;
+            background-color: #00FA9A;
+            
+            display:flex;
+            flex-direction: row;
+
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .card{
+
+            background-color: rgb(253, 249, 249);
+            border: 1px solid black;
+            border-radius: 18px;
+            width:350px;
+            height:auto;
+
+            margin-top:100px;
+
+            padding:10px;
+        }
+
+        .card>img{
+
+            border-radius: 16px;
+            width:100%;
+             height: auto;
+        }
+
+        .matter{
+
+            height: auto;
+            padding:10px;
+        }
+        .matter h2{
+            margin-top: 5px;
+            font-weight: 1000px;
+        }
+        .matter p{
+            margin-top: 10px;
+            text-indent: 50px;
+        }
+
+        .card:hover{
+
+            box-shadow: 4px 4px 6px grey;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="card">
+
+            <img src="images/qrcode.png" alt="Image">
+
+            <div class="matter">
+                <h2>Improve your Frontend Skills by making projects.</h2>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt maiores nobis consequuntur. Aspernatur neque vitae voluptatem quia impedit quibusdam repellat.</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
