@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button1 Animation</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+
+        .wrapper{
+            width:100vw;
+            height: 100vh;
+            
+            display: flex;
+            flex-direction: row;
+
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .box{
+            background-color: tomato;
+            color: white;
+            padding: 0.8rem 2.3rem;
+
+            font-size: 18px;
+
+            box-shadow: 5px 5px 7px 0px #0000003f;
+
+            position: relative;
+
+            z-index: 1;
+        }
+
+        .box::before{
+            content: "";
+       
+            position: absolute;
+            top:0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+
+        
+           
+           
+            z-index: -1;   
+        }
+        
+
+        .box:hover::before{
+
+            transform-origin: left;
+
+            animation-name: a1;
+            animation-duration: 0.8s;
+            animation-delay: 0.2s;
+            animation-timing-function: linear;
+
+            /* animation-direction: reverse; */
+        }
+
+       
+        @keyframes a1{
+
+            0%{
+                width:0%;
+                background-color: black;
+            }
+
+            50%{
+                width:50%;
+                background-color: black;
+            }
+            100%{
+                width:100%;
+                background-color: black;  
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="box">Click Me</div>
+    </div>
+</body>
+</html>
