@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+
+    <script>
+        function myFunction() {
+          alert("Submitted Successfully!");
+        }
+    </script>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            width:100vw;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: rgb(40, 41, 41);
+        }
+        .container{
+            border:2px solid white;
+            box-shadow: 3px 3px 20px white;
+            padding: 1rem;
+            width:40%;
+        }
+       
+        .uinp,button{
+            display: block;
+            margin-bottom: 2rem;
+
+            border:1px solid black;
+            border-radius: 1rem;
+        }
+        .uinp{
+            width:50%;
+            padding: 1rem;
+            outline: 2px solid skyblue;
+            border: none;
+        }
+        .uinp:focus, .uinp:hover{
+            box-shadow: 2px 2px 10px rgb(128, 98, 0), -2px -2px 10px rgb(0, 77, 128);
+        }
+        .ta{
+            height: 10rem;
+            width: 70%;
+        }
+
+        .cb{
+            transform: scale(1.4);
+            margin-right: 0.5rem;
+            box-shadow: 2px 2px 10px rgb(0, 77, 128), -2px -2px 10px rgb(0, 77, 128);
+            transition-duration: 0.5s;
+
+        }
+        .cb:active{
+            transform: scale(1.8);
+        }
+        .cb:checked{
+            box-shadow: 2px 2px 10px rgb(109, 128, 1), -2px -2px 10px rgb(109, 128, 0);
+        }
+        .cb~ span{
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+
+        .btn{
+            margin-top: 3rem;
+
+            padding: 0.7rem 1.6rem;
+            border: 2px solid white;
+            border-radius: 5px;
+            color: black;
+            font-weight: 700;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+
+            position: relative;
+            z-index: 1;
+        }
+        .btn::before{
+            content: "";
+            background-color: aqua;
+            border-radius: 5px;
+
+            position: absolute;
+            top:0; bottom: 0;
+            left: 0; right: 0;
+            z-index: -1;
+            
+        }
+        .btn:hover::before{
+            background-color: white;
+            transform: scale(1.2);
+            box-shadow: 3px 3px 20px aqua, -3px -3px 20px rgb(230, 255, 1);
+            transition-duration: 0.5s;
+        }
+        .cb:not(:checked)~.btn{
+            cursor: not-allowed;
+        }
+       
+    </style>
+        
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+
+            <input class="uinp uname" type="text" placeholder="Enter your name"> 
+
+            <input class="uinp usport" type="text" placeholder="Enter the sport" list="sp"> 
+            <datalist id="sp">
+                <option value="Cricket">
+                <option value="Football">
+                <option value="Baseball">
+                <option value="Basketball">
+                <option value="Volleyball">
+                <option value="Boxing">
+                <option value="Chess">
+                <option value="Cycling">
+                <option value="Swimming">
+                <option value="Rugby">
+                <option value="Skating">
+                <option value="Tennis">
+            </datalist>
+
+            <input class="uinp ta" type="text" placeholder="Enter your team details">
+
+            <input class="cb" type="checkbox" name="cb" id="cb">
+            <span>I agree to all the terms.</span>
+
+            <button class="btn" onclick="myFunction()">Submit</button>
+              
+        </div>
+    </div>
+</body>
+</html>

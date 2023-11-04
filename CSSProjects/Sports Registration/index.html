@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            width:100v;
+            height: 100vh;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: row;
+
+            justify-content: center;
+            align-items: center;
+           
+            color: black;
+
+            position: relative;
+        }
+
+        .loginbox{
+            width:30%;
+
+            display: flex;
+            flex-direction: column;
+            /* border:1px solid rgb(255, 255, 255); */
+            box-shadow: 3px 3px 30px 5px rgb(0, 0, 0);
+
+            padding: 3rem;
+        }
+
+        .heading{
+            margin-bottom: 3rem;
+
+            font-weight: 900;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(255, 255, 255);
+
+            letter-spacing: 2px;
+            font-size: 3rem;
+
+        }
+
+        label{
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+
+            font-weight: 600;
+        }
+        .inp{
+            margin-bottom: 1.5rem;;
+            width:70%;
+            height: 2.5rem;
+
+            padding: 1rem;
+            border:1px solid black;
+            border-radius: 4px;
+
+            background: transparent;
+        }
+        .inp:hover{
+            cursor: pointer;
+            box-shadow: 2px 2px 20px 1px rgb(205, 255, 5), -2px -2px 20px rgb(128, 0, 255);
+        }
+        .inp::placeholder{
+            color: white;
+            opacity: 1;
+            font-weight: 400;
+        }
+
+        .btn{
+            
+            padding: 15px 10px;
+
+            width:50%;
+            min-width: 25%;
+            height:22%;
+            border-radius: 5px;
+
+            margin-top: 1.5rem;
+            border: 2px solid rgb(8, 8, 8);
+
+            background-color: transparent;
+            /* box-shadow: 2px 2px 10px 0 rgb(65, 121, 140), -2px -2px 10px rebeccapurple; */
+
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            font-weight: 900;
+
+            position: relative;
+        }
+        .btn:hover{
+            box-shadow: 1px 1px 20px 5px rgba(11, 3, 102, 0.771);
+            cursor: pointer;
+        }
+
+        .wc{
+            background: transparent;
+            position: absolute;
+            top:45%;
+            left: 40%;
+
+            z-index: -1;
+
+            transform: scale(0,0);
+            opacity: 0;
+
+            font-weight: bolder;
+            font-size: 3rem;
+
+            animation-name:grow;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes grow{
+            0%{
+                opacity: 0;
+                transform:scale(1,1);
+            }
+            25%{
+                opacity: 0.25;
+                transform:scale(2,2);
+                z-index: 1;
+            }
+            50%{
+                opacity: 0.5;
+                transform:scale(3,3);
+                z-index: 1;
+            }
+            75%{
+                opacity: 0.25;
+                transform:scale(4,4);
+                z-index: 1;
+            }
+            100%{
+                opacity: 0;
+                transform:scale(5,5);
+            }
+        }
+
+        .bgbox{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+
+            /* background-color: rgba(0, 0, 0, 0.581); */
+            z-index: -1;
+            background-image: url(imgs/glowing-sports-stadium-65rc2p670tr88gxa.jpg);
+            background-size: cover;
+            background-position: center;
+            filter: blur(0.9px);
+        }
+
+        .ufo{
+           /* border:2px solid red; */
+           width: 20%;
+           height: 2.5rem;
+           
+           position: absolute;
+           top:-80%;
+           left:0%;
+
+           background-image: url(imgs/—Pngtree—ufo\ alien\ flying\ saucer\ cartoon_2685325.png);
+           background-size: contain;
+           background-repeat: no-repeat;
+           filter: blur(0.1px);
+           transform: translateY(2rem);
+           opacity: 0;   
+        }
+        .btn:hover> .ufo{
+            opacity: 1;
+            transform: translateY(0rem);
+            transition-duration: 0.2s;
+        }
+        
+        .btn:active> .ufo{
+            opacity: 0;
+            transform: translateX(40rem);
+            transition-duration: 1s;
+        }   
+        
+       
+            
+           
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="loginbox">
+           <div class="heading">LOGIN</div>
+
+            <label for="uname">Username</label>
+            <input class="inp" type="text" id="uname" name="uname" placeholder="Enter your name".>
+
+            <label for="email">Email</label>
+            <input class="inp" type="email" id="email" name="email" placeholder="Enter your e-mail">
+
+            <label for="pw">Password</label>
+            <input class="inp" type="password" id="pw" name="pw" placeholder="Enter password." minlength="8">
+
+            
+            
+            <a  class="btn" href="sports.html">
+                <div>Login</div>
+                <div class="ufo"></div>
+            </a>
+        </div>
+
+        <div class="wc">
+            WELCOME!
+        </div>
+
+        <div class="bgbox"></div>
+    </div>
+</body>
+</html>
