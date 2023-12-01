@@ -25,13 +25,13 @@
 
             <div class="w-[100%] flex flex-row justify-between items-center gap-12 p-3 px-6 bg-white rounded-sm text-[25px] text-[#344151]">
 
-                <button class="border-[#bfbfbf] border-r-2 pr-5">
+                <button class="border-[#bfbfbf] border-r-2 pr-5" id="incbtn">
                     <i class="fa-solid fa-minus"></i>
                 </button>
 
-                <p class="font-bold">0</p>
+                <p class="font-bold" id="countvalue">0</p>
 
-                <button class="border-[#bfbfbf] border-l-2 pl-5">
+                <button class="border-[#bfbfbf] border-l-2 pl-5" id="decbtn">
                     <i class="fa-solid fa-plus"></i>
                 </button>
                 
@@ -45,7 +45,7 @@
                     onfocusin=" this.placeholder='' "
                     onfocusout=" this.placeholder='Increment By Value'" >
 
-                    <button class="w-[30%] bg-red-500 p-2 px-6 font-medium rounded-sm" id="incbtn" onclick="incfunc(this)">
+                    <button class="w-[30%] bg-red-500 p-2 px-6 font-medium rounded-sm" id="incvalbtn" onclick="incfunc()">
                         Update
                     </button>
                 </div>
@@ -56,13 +56,13 @@
                     onfocusin=" this.placeholder='' "
                     onfocusout=" this.placeholder='Deccrement By Value' ">
 
-                    <button class="w-[30%] bg-red-500 p-2 px-6 font-medium rounded-sm" id="decbtn" onclick="decfunc(this)">
+                    <button class="w-[30%] bg-red-500 p-2 px-6 font-medium rounded-sm" id="decvalbtn" onclick="decfunc()">
                         Update
                     </button>
                 </div>
 
                 <!-- Clear -->
-                <button class="bg-orange-500  p-2 px-6 font-medium text-yellow text-xl text-center rounded-sm">
+                <button class="bg-orange-500  p-2 px-6 font-medium text-yellow text-xl text-center rounded-sm" id="clear">
                     Clear
                 </button>
             </div>
@@ -71,5 +71,7 @@
 
     <script src="https://kit.fontawesome.com/58a810656e.js"> 
     </script>
+
+    <script src="index.js"></script>
 </body>
 </html>
