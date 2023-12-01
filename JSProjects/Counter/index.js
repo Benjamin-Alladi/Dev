@@ -8,23 +8,22 @@ let dbox= document.getElementById("decbox");
 
 
 // EventListeners:
-ibtn.addEventListener("click", increment);
-dbtn.addEventListener("click", decrement);
+ibtn.addEventListener("click", increments);
+dbtn.addEventListener("click", decrements);
 
-function increment()
+function increments()
 {
     let val= ele.innerHTML;
     val= parseInt(val);
     val=val+1;
-    console.log(val, typeof val);
+    // console.log(val, typeof val);
     ele.innerHTML=val;
 };
 
-function decrement()
+function decrements()
 {
     ele.innerHTML= parseInt(ele.innerHTML)-1;
 };
-
 
 
 // clear:
@@ -39,7 +38,7 @@ function clr()
 // Increment By Value Function:
 function incfunc()
 {
-    let val= ibox.innerHTML;
+    let val= ibox.value;
 
     if(val==="")
     {
@@ -56,7 +55,7 @@ function incfunc()
 // Decrement By Value Function:
 function decfunc()
 {
-    let val= dbox.innerHTML;
+    let val= dbox.value;
 
     if(val==="")
     {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>Counter</title>
+    <title>Counter App</title>
 
     <style>
         .container{
@@ -25,13 +25,13 @@
 
             <div class="w-[100%] flex flex-row justify-between items-center gap-12 p-3 px-6 bg-white rounded-sm text-[25px] text-[#344151]">
 
-                <button class="border-[#bfbfbf] border-r-2 pr-5" id="incbtn">
+                <button class="border-[#bfbfbf] border-r-2 pr-5" id="decbtn">
                     <i class="fa-solid fa-minus"></i>
                 </button>
 
                 <p class="font-bold" id="countvalue">0</p>
 
-                <button class="border-[#bfbfbf] border-l-2 pl-5" id="decbtn">
+                <button class="border-[#bfbfbf] border-l-2 pl-5" id="incbtn">
                     <i class="fa-solid fa-plus"></i>
                 </button>
                 
@@ -54,7 +54,7 @@
                 <div class="flex gap-2">
                     <input type="number" id="decbox" placeholder="Deccrement By Value" class="rounded-sm text-center p-2 px-6 font-medium w-[70%] outline-none caret-[#636c72]"
                     onfocusin=" this.placeholder='' "
-                    onfocusout=" this.placeholder='Deccrement By Value' ">
+                    onfocusout=" this.placeholder='Decrement By Value' ">
 
                     <button class="w-[30%] bg-red-500 p-2 px-6 font-medium rounded-sm" id="decvalbtn" onclick="decfunc()">
                         Update
