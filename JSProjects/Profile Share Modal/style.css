@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: black;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.wrapper{
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+img{
+    border-radius: 10rem;
+}
+
+.container{
+    width:25%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    background: #ffffff1a;
+    color: #ffffff;
+    border: 2px solid #ffffff30;
+    border-radius: 15px;
+    padding: 20px 50px;
+
+    backdrop-filter: blur(15px);
+}
+
+.name{
+    font-size: 2rem;
+}
+.role{
+    color: #ffffff85;
+}
+
+.btnbox{
+    display:flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.btn{
+    padding: 9px 12px;
+    background: #ffffff00;
+    color: #ffffffb9;
+
+    border: 2px solid #ffffffb9;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition-duration: 0.5s;
+}
+.sharebtn{
+    display: flex;
+    gap:10px;
+}
+.followbtn>a{
+    text-decoration: none;
+    color: white;
+}
+.btn:hover{
+    background: white;
+    color: black;
+}
+.followbtn:hover a{
+    color: black;
+}
+
+.circle1{
+    width: 13em;
+    height: 13em;
+
+    border-radius: 50%;
+    background: linear-gradient(-25deg, #d84869, #f46641);
+    box-shadow: 0 0 50px #d84869;
+
+    position:absolute;
+    top: 5%;
+    left: 30%;
+
+    animation-name: tcircle;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+@keyframes tcircle{
+    50% {
+        left: 33%;
+        top: 4%;
+        scale: 1.11;
+    }
+}
+
+
+.circle2{
+    width: 15em;
+    height: 15em;
+
+    border-radius: 50%;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    box-shadow: 0 0 50px #5648d8;
+
+    position: absolute;
+    bottom: 5%;
+    right: 30%;
+
+    animation-name: bcircle;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+@keyframes bcircle{
+    50% {
+        bottom: 6%;
+        right: 31%;
+    }
+}
