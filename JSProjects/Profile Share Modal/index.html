@@ -24,13 +24,13 @@
             <!-- buttonbox -->
             <div class="btnbox">
 
-                <button class="btn sharebtn">
+                <button class="btn sharebtn" onclick="openModel()">
                     <i class="fa-solid fa-share"></i>
                     <span>Share My Profile</span>
                 </button>
 
                 <button class="btn followbtn">
-                    <a href="">Follow Me</a>
+                    <a href="http://www.linkedin.com">Follow Me</a>
                 </button>
             </div>
         </dv>
@@ -40,7 +40,7 @@
             <div class="mheading">
                 <h1>Share My Profile</h1>
                 <div>
-                    <i class="fa-solid fa-xmark close"></i>
+                    <i class="fa-solid fa-xmark close" onclick="closeModal()"></i>
                 </div>
             </div>
 
@@ -73,7 +73,11 @@
         </div>
     </div>
 
+    <!-- overlay -->
+    <div class="overlay" onclick="closeModal()"></div>
 
     <script src="https://kit.fontawesome.com/58a810656e.js"></script>
+
+    <script src="index.js"></script>
 </body>
 </html>
