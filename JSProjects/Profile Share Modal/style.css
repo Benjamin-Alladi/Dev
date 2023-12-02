@@ -1,20 +1,20 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background: black;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+        "Lucida Sans", Arial, sans-serif;
 }
 
-.wrapper{
-    width:100vw;
-    height:100vh;
+.wrapper {
+    width: 100vw;
+    height: 100vh;
 
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -24,13 +24,22 @@ body{
     position: relative;
 }
 
-img{
-    border-radius: 10rem;
+.imgbox {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #ffffff30;
+    border-radius: 50%;
 }
 
-.container{
-    width:25%;
-    display:flex;
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.container {
+    width: 25%;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -42,22 +51,27 @@ img{
     border-radius: 15px;
     padding: 20px 50px;
 
+    z-index: 10;
     backdrop-filter: blur(15px);
 }
 
-.name{
+.name {
     font-size: 2rem;
 }
-.role{
+
+.role {
     color: #ffffff85;
 }
 
-.btnbox{
-    display:flex;
+.btnbox {
+    display: flex;
     flex-direction: row;
     gap: 10px;
+
+    margin-bottom: 2rem;
 }
-.btn{
+
+.btn {
     padding: 9px 12px;
     background: #ffffff00;
     color: #ffffffb9;
@@ -68,23 +82,27 @@ img{
 
     transition-duration: 0.5s;
 }
-.sharebtn{
+
+.sharebtn {
     display: flex;
-    gap:10px;
+    gap: 10px;
 }
-.followbtn>a{
+
+.followbtn>a {
     text-decoration: none;
     color: white;
 }
-.btn:hover{
+
+.btn:hover {
     background: white;
     color: black;
 }
-.followbtn:hover a{
+
+.followbtn:hover a {
     color: black;
 }
 
-.circle1{
+.circle1 {
     width: 13em;
     height: 13em;
 
@@ -92,7 +110,7 @@ img{
     background: linear-gradient(-25deg, #d84869, #f46641);
     box-shadow: 0 0 50px #d84869;
 
-    position:absolute;
+    position: absolute;
     top: 5%;
     left: 30%;
 
@@ -100,7 +118,8 @@ img{
     animation-duration: 12s;
     animation-iteration-count: infinite;
 }
-@keyframes tcircle{
+
+@keyframes tcircle {
     50% {
         left: 33%;
         top: 4%;
@@ -109,7 +128,7 @@ img{
 }
 
 
-.circle2{
+.circle2 {
     width: 15em;
     height: 15em;
 
@@ -125,9 +144,125 @@ img{
     animation-duration: 12s;
     animation-iteration-count: infinite;
 }
-@keyframes bcircle{
+
+@keyframes bcircle {
     50% {
         bottom: 6%;
         right: 31%;
     }
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 35%;
+    left: 33%;
+    z-index: 100;
+
+    width: 500px;
+    border: 2px solid #ffffff59;
+    border-radius: 20px;
+    padding: 20px 25px;
+
+    color: white;
+    background: #00000088;
+
+    backdrop-filter: blur(10px);
+
+    scale: 0;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.mheading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff88;
+}
+
+.mheading div>i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.iconbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.iconbox>a {
+    width: 30px;
+    height: 30px;
+
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 27px;
+    margin: 10px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+
+.iconbox a>i {
+    font-size: 27px;
+}
+
+#facebook {
+    color: #1771e6;
+    border: 1px solid #1771e6;
+}
+
+#facebook:hover {
+    background-color: #1771e6;
+    color: #fff;
+}
+
+#twitter {
+    color: #1c99e6;
+    border: 1px solid #1c99e6;
+}
+
+#twitter:hover {
+    background-color: #1c99e6;
+    color: #fff;
+}
+
+#instagram {
+    color: #cb2770;
+    border: 1px solid #cb2770;
+}
+
+#instagram:hover {
+    background-color: #cb2770;
+    color: #fff;
+}
+
+#whatsapp {
+    color: #2fe664;
+    border: 1px solid #2fe664;
+}
+
+#whatsapp:hover {
+    background-color: #2fe664;
+    color: #fff;
+}
+
+#telegram {
+    color: #0081c2;
+    border: 1px solid #0081c2;
+}
+
+#telegram:hover {
+    background-color: #0081c2;
+    color: #fff;
 }
