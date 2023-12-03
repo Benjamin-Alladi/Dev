@@ -48,14 +48,59 @@
 }
 
 .pg{
-    width: 60%;
+
+    width: fit-content;
     border: 2px solid white;
     border-radius: 8px;
 
     padding: 1rem 0rem;
     padding-left: 1rem;
-    margin-bottom: 2rem;
+    padding-right: 1rem;
+    margin-top: 3rem;
+
+    font-size: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    line-height: 1.5rem;
 
     background: rgba(0, 0, 0, 0.626);
     color: white;
+}
+
+
+.clrbtn{
+
+    margin-top: 0.5rem;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+
+    background: red;
+    color: white;
+    z-index: 1;
+
+    position: relative;
+}
+.clrbtn:hover{
+    color: black;
+}
+.clrbtn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    border-radius: 6px;
+    background-color: white;
+    z-index: -1;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition-duration: 0.1s;
+}
+.clrbtn:hover::before{
+    opacity: 1;
+    transform: scaleX(1);
 }
