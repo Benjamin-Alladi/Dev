@@ -73,7 +73,7 @@ wrapper.addEventListener("click", function(event) {
 });
 
 function clr(event) {
-    console.log("el");
+    console.log("EventListener invoked.");
     let targetClass = event.target.classList[1];
 
     console.log(targetClass);
