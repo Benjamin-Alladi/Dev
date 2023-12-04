@@ -74,15 +74,16 @@ wrapper.addEventListener("click", function(event) {
 
 function clr(event) {
     console.log("EventListener invoked.");
-    let targetClass = event.target.classList[1];
 
+    let targetClass = event.target.classList[1];
     console.log(targetClass);
 
     let target = document.getElementsByClassName(targetClass);
     console.log(target);
 
+    
     for (let i = 0; i < target.length; i++) {
-        event.target.remove();
         target[i].remove();
     }
+    event.target.remove();
 }
