@@ -6,8 +6,47 @@
     <link rel="stylesheet" href="main.css">
 
     <title>Temperature Converter</title>
+
+    <style>
+        .targetcl
+        {
+            color: rgb(241, 138, 138);
+        }
+    </style>
 </head>
 <body>
-    <!-- /c/WebDev/Repo/Dev/JSProjects/Temperature Converter -->
+    <!-- /c/WebDev/Repo/Dev/JSProjects/"Temperature Converter" -->
+
+    <div class="wrapper bg-blue-400 w-[100vw] h-[100vh] flex flex-col justify-center items-center">
+
+        <h2 class="text-white font-bold text-[3rem] tracking-[0.5px]">Temperature Converter</h2>
+    
+       <div  class="container flex flex-row justify-evenly border border-slate-600 rounded-md m-6 p-10">
+
+        <div class="flex flex-col">
+            <select id="fsel" class="w-[6rem] border border-slate-600 rounded-sm outline-none">
+                <option value="celsius" id="fc" selected>celsius</option>
+                <option value="fahrenheit" id="ff">fahrenheit</option>
+                <option value="kelvin" id="fk">kelvin</option>
+            </select>
+
+            <input type="number" id="finp" value="0" class="px-2 py-1 rounded-md border border-slate-600 mt-[0.1px] outline-none">
+        </div>
+
+        <div class="flex flex-col">
+            <select id="ssel" class="w-[6rem] border border-slate-600 rounded-sm outline-none">
+                <option value="celsius" id="sc">celsius</option>
+                <option value="fahrenheit" id="sf" selected>fahrenheit</option>
+                <option value="kelvin" id="sk">kelvin</option>
+            </select>
+
+            <input type="number" id="sinp" value="32" class="px-2 py-1 rounded-md border border-slate-600 mt-[0.1px] outline-none">
+        </div>
+
+       </div>
+ 
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
