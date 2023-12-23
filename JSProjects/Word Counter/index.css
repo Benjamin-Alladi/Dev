@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@100&family=Vesper+Libre&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper
+{
+    width:100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container
+{
+    width: 50%;
+    border: 2px solid black;
+}
+
+.heading{
+    border: 2px solid black;
+    border-radius: 2px;
+
+    background-color: skyblue;
+    padding: 0.8rem 1rem;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    font-size: 1.2rem;
+
+    font-weight: 600;
+    text-align: center;
+}
+
+.ta
+{
+    padding: 10px;
+    outline: none;
+    resize: vertical;
+    border: 2px solid black;
+
+    box-sizing: border-box;
+    width: 100%;
+}
+.ta::placeholder
+{
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.display
+{
+    margin-top: -10px;
+    padding: 1rem 0.9px;
+    text-align: center;
+
+    background-color: skyblue;
+    font-family: 'Marcellus', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    word-spacing: 2px;
+    border: 2px solid black;
+}
+.word, .char
+{
+    font-family: serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white;
+}
