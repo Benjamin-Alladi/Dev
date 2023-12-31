@@ -138,7 +138,8 @@ function check()
         ppicon.outerHTML= '<i id="ppgreen" class="fa fa-check ppicon"></i>';
         ppmsg.innerHTML= "Form Submitted Successfully";
         popup.classList.add("popup-open");
-        
-        setTimeout(()=>{return true}, 20000);
+
+        setTimeout(()=>{document.querySelector("form").submit()}, 5000);
+        return false;
     }
 }
