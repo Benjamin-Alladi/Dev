@@ -40,7 +40,7 @@
                 <div class="box">
                     <label for="pswrd">Password:</label>
                     <input type="password" name="" id="pswrd" placeholder="Enter your Password"> 
-                    <i class='fa fa-eye-slash' id="eye-close"></i>
+                    <i class='fa fa-eye' id="eye"></i>
                     <span id="perror"></span>
                 </div>
                 <br>
@@ -54,10 +54,14 @@
 
                 <button class="btn" onclick="return check()">Submit</button>
             </form>
+        </div>
 
+        <div class="popup">
+            <i id="ppgreen" class="fa fa-check ppicon"></i>
+            <p class="ppmsg">Submitted</p>
+            <button class="ppbtn btn">Close</button>
         </div>
     </div>
-
     <script src="index.js"></script>
 </body>
 </html>
