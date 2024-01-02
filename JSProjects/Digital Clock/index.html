@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/76f948598c.js" crossorigin="anonymous"></script>
+    <title>Digital Clock</title>
+
+    <style>
+        .time>span {
+            position: relative;
+        }
+
+        .time>span::after {
+            /* content: "Hours"; */
+            font-size: medium;
+            position: absolute;
+            bottom: -15px;
+            left: 30%;
+        }
+
+        .hours::after {
+            content: "Hours";
+        }
+
+        .minutes::after {
+            content: "Minutes";
+        }
+
+        .seconds::after {
+            content: "Seconds";
+        }
+
+        .time {
+            background-color: rgba(0, 0, 0, 0.633);
+        }
+
+        .lc
+        {
+            animation-name: lmove;
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes lmove
+        {
+            50%
+            {
+                top: 35%;
+                left: 30%;
+            }
+        }
+        .rc
+        {
+            animation-name: rmove;
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rmove
+        {
+            50%
+            {
+                bottom: 35%;
+                right: 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-[100vw] h-[100vh] bg-slate-600 overflow-x-hidden flex flex-row justify-center items-center relative">
+        <div class="lc w-[150px] h-[150px] bg-red-800 rounded-[50%] absolute top-[40%] left-[25%] blur-[1px]"></div>
+        <div class="rc w-[150px] h-[150px] bg-orange-800 rounded-[50%] absolute bottom-[30%] right-[25%] blur-[1px]"></div>
+        <div class="time text-[5rem] text-white px-12 py-2 z-10 backdrop-blur-[5px]">
+            <span class="hours">00</span> :
+            <span class="minutes">00</span> :
+            <span class="seconds">00</span>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
