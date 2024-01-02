@@ -65,4 +65,26 @@ function res()
     y.innerHTML= years;
     m.innerHTML= months;
     d.innerHTML= days;
+
+    greet(days);
+}
+
+function greet(d)
+{
+    let nbox= document.querySelector(".nbox");
+    let ntf= document.createElement("div");
+    ntf.classList.add("ntf", "ntfstyle", "move");
+    if(d==0)
+    { 
+        ntf.classList.add("green");
+        ntf.innerHTML= `<i class='fas fa-birthday-cake'></i> Happy Birthday !!`;
+    }
+    else
+    {
+        ntf.classList.add("red");
+        ntf.innerHTML= `<i class='fas fa-bullhorn'></i> <span class="ntfdays">${365-d}</span> days left for your Birthday !!`;
+    }
+    nbox.appendChild(ntf);
+
+    setTimeout(()=>{ntf.remove()},4000);
 }
