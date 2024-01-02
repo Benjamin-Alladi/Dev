@@ -45,6 +45,7 @@ function update()
         m++;
         if(m==61)
         {
+            m=0;
             h++;
         }
     }
