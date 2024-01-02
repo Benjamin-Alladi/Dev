@@ -73,7 +73,7 @@ function greet(d)
 {
     let nbox= document.querySelector(".nbox");
     let ntf= document.createElement("div");
-    ntf.classList.add("ntf", "ntfstyle", "move");
+    ntf.classList.add("ntf", "ntfstyle");
     if(d==0)
     { 
         ntf.classList.add("green");
@@ -82,7 +82,7 @@ function greet(d)
     else
     {
         ntf.classList.add("red");
-        ntf.innerHTML= `<i class='fas fa-bullhorn'></i> <span class="ntfdays">${365-d}</span> days left for your Birthday !!`;
+        ntf.innerHTML= `<i class="fas fa-bullhorn"></i> <span class="ntfdays">${365-d}</span> days left for your Birthday !!`;
     }
     nbox.appendChild(ntf);
 
